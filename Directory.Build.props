@@ -1,0 +1,23 @@
+<Project>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup Label="NuGet package properties">
+        <Copyright>Copyright (c) 2024 Matěj Sháněl</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Authors>Matěj Sháněl</Authors>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/shanemat/DotNetUtils</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\Images\icon.png" Pack="true" PackagePath="\"/>
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+</Project>
