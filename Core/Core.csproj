@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <RootNamespace>Shanemat.DotNetUtils.Core</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup Label="NuGet package properties">
+        <IsPackable>True</IsPackable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>Shanemat.DotNetUtils.Core</PackageId>
+        <Title>Common utilities for .NET projects</Title>
+        <Description>The common utilities that might come in handy in .NET projects</Description>
+        <PackageVersion>1.0.0</PackageVersion>
+        <PackageTags>dotnet;c#</PackageTags>
+        <PackageReleaseNotes>ReleaseNotes.md</PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="ReleaseNotes.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+</Project>
