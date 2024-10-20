@@ -181,6 +181,37 @@ public static class DoubleCompareExtensions
 
 	#endregion
 
+	#region IsNegative
+
+	/// <summary>
+	/// Returns a value indicating whether the value is negative (within specified tolerance)
+	/// </summary>
+	/// <param name="value">The value to check</param>
+	/// <param name="tolerance">The tolerance to use</param>
+	/// <exception cref="ArgumentException">Thrown in case supplied tolerance is negative</exception>
+	public static bool IsNegative( this double value, double tolerance = StandardEpsilon )
+	{
+		CheckTolerance( tolerance );
+
+		return value.IsLessThan( 0.0, tolerance );
+	}
+
+	/// <summary>
+	/// Returns a value indicating whether the value is negative (within specified tolerance)
+	/// </summary>
+	/// <param name="value">The value to check</param>
+	/// <param name="tolerance">The tolerance to use</param>
+	/// <exception cref="ArgumentException">Thrown in case supplied tolerance is negative</exception>
+	/// <remarks>Please note that this method will return <see langword="false"/> if the value is <see langword="null"/></remarks>
+	public static bool IsNegative( this double? value, double tolerance = StandardEpsilon )
+	{
+		CheckTolerance( tolerance );
+
+		return value.IsLessThan( 0.0, tolerance );
+	}
+
+	#endregion
+
 	#region Helpers
 
 	/// <summary>
