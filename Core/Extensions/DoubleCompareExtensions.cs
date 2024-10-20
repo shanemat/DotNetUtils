@@ -115,6 +115,39 @@ public static class DoubleCompareExtensions
 
 	#endregion
 
+	#region IsLessThan
+
+	/// <summary>
+	/// Returns a value indicating whether the first value is less than the second one (within specified tolerance)
+	/// </summary>
+	/// <param name="value">The value to compare</param>
+	/// <param name="otherValue">The value to compare the first value to</param>
+	/// <param name="tolerance">The tolerance to use</param>
+	/// <exception cref="ArgumentException">Thrown in case supplied tolerance is negative</exception>
+	public static bool IsLessThan( this double value, double otherValue, double tolerance = StandardEpsilon )
+	{
+		CheckTolerance( tolerance );
+
+		return otherValue - value >= tolerance;
+	}
+
+	/// <summary>
+	/// Returns a value indicating whether the first value is less than the second one (within specified tolerance)
+	/// </summary>
+	/// <param name="value">The value to compare</param>
+	/// <param name="otherValue">The value to compare the first value to</param>
+	/// <param name="tolerance">The tolerance to use</param>
+	/// <exception cref="ArgumentException">Thrown in case supplied tolerance is negative</exception>
+	/// <remarks>Please note that this method will return <see langword="false"/> if either (or both) of the values is <see langword="null"/></remarks>
+	public static bool IsLessThan( this double? value, double? otherValue, double tolerance = StandardEpsilon )
+	{
+		CheckTolerance( tolerance );
+
+		return otherValue - value >= tolerance;
+	}
+
+	#endregion
+
 	#region Helpers
 
 	/// <summary>
